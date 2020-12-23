@@ -1,0 +1,77 @@
+let mapleader = " "
+set number
+set relativenumber
+set surround
+set visualbell
+set noerrorbells
+set clipboard+=unnamed
+set scrolloff=3
+set ignorecase
+set smartcase
+set showmode
+set incsearch
+set hlsearch
+set easymotion
+
+nnoremap J 5j
+nnoremap K 5k
+
+nnoremap <Enter> o<Esc>
+nnoremap <S-Enter> O<Esc>
+
+vmap <Tab> :action EditorIndentSelection<cr>
+vmap <leader>s :action SurroundWith<cr>
+
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap ge :action GotoNextError<cr>
+nnoremap gE :action GotoPreviousError<cr>
+
+nnoremap <leader>u :action FindUsages<CR>
+nnoremap <leader>r :action RenameElement<CR>
+
+nnoremap <leader>a :action GotoAction<CR>
+nnoremap <leader>s :action GotoSymbol<cr>
+nnoremap <leader>c :action GotoClass<cr>
+nnoremap <leader>; :action FileStructurePopup<CR>
+nnoremap <leader>g :action Generate<cr>
+nnoremap <leader>p :action ParameterInfo<cr>
+nnoremap <leader>f :action GotoFile<cr>
+
+nnoremap <leader>zc :action CollapseRegion<cr>
+nnoremap <leader>zo :action ExpandRegion<cr>
+
+nnoremap <leader>T :action SelectInProjectView<cr>
+
+" ============================================================================
+" key bindings for quickly moving between windows
+" h left, l right, k up, j down
+" ============================================================================
+nmap <leader>wh <c-w>h
+nmap <leader>wl <c-w>l
+nmap <leader>wk <c-w>k
+nmap <leader>wj <c-w>j
+nmap <leader>wv <c-w>v
+nmap <leader>ws <c-w>s
+nmap <leader>wc <c-w>c
+nmap <leader>wm :action HideAllWindows<CR>
+nmap <leader>wz :action ToggleDistractionFreeMode<CR>
+
+nmap <leader>im  :action ImplementMethods<CR>
+nmap <leader>e   :action RecentFiles<CR>
+
+" search in project
+nmap <leader>F :action FindInPath<CR>
+nmap <leader>/ :action Find<cr>
+
+" Tabs
+nnoremap <leader>tp :action PreviousTab<cr>
+nnoremap <leader>tn :action NextTab<cr>
+nmap <leader>tc :action CloseContent<cr>
+nmap <leader>tC :action ReopenClosedTab<cr>
+
+nmap <leader>L :action RecentLocations<CR>
+
+" Terminal
+nnoremap <leader>j :action ActivateTerminalToolWindow<cr>

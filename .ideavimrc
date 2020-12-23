@@ -75,3 +75,20 @@ nmap <leader>L :action RecentLocations<CR>
 
 " Terminal
 nnoremap <leader>j :action ActivateTerminalToolWindow<cr>
+
+" Which key combos to delegate to Idea vs Vim plugin:
+" <C-i> -> forward
+" <C-o> -> back
+" <C-n> -> down
+" <C-p> -> up
+" <C-j> -> insert live template
+" <C-q> -> quick documentation
+
+" also remap caps lock to esc
+
+" Plugins to also install:
+" 1. IdeaVim
+" 2. AceJump
+" 3. IdeaVim-EasyMotion
+" 4. Rainbow Brackets
+" 5. Solarized Themes
